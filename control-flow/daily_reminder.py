@@ -1,31 +1,35 @@
 task_description = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
-time = input("Is it time-bound? (yes/no): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 match priority:
     case "high":
-        if time == "yes":
+        if time_bound == "yes":
             print(f"{task_description} is a {priority} priority task that requires immediate attention today!")
-        elif time == "no":
+        elif time_bound == "no":
             print(f"{task_description} is a {priority} priority task. Consider completing it when you have free time.")
         else:
             print("time not specified!")
     case "medium":
-        if time == "yes":
+        if time_bound == "yes":
             print(f"{task_description} is a {priority} priority task that requires immediate attention today!")
-        elif time == "no":
+        elif time_bound == "no":
             print(f"{task_description} is a {priority} priority task. Consider completing it when you have free time.")
         else:
             print("time not specified!")
     case "low":
-        if time == "yes":
+        if time_bound == "yes":
             print(f"{task_description} is a {priority} priority task that requires immediate attention today!")
-        elif time == "no":
+        elif time_bound == "no":
             print(f"{task_description} is a {priority} priority task. Consider completing it when you have free time.")
         else:
             print("time not specified!")
     case _:
-        print("priority is not specified!")
+        if time_bound == "yes" or time_bound == "no":
+            print("priority is not specified!")
+        else:
+            print("Both priority and time bound nature are not specified.\nInput correct values!")
+  
             
 
 
