@@ -14,17 +14,17 @@ def main():
     temp = float(input(f"Enter the temperature to convert: "))
     unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
     
-    # if temp:
-    #     if unit == "F":
-    #         conv_unit = co nvert_to_celsius(temp)
-    #         print(f"{temp}° F is {conv_unit}°C")
-    #     elif unit == "C":
-    #         conv_unit = co nvert_to_fahrenheit(temp)
-    #         print(f"{temp}° C is {conv_unit}° F")
-    #     # else:
-    #         # print("Run the program again and Choose a valid option(C/F)!")
-    # # else:
-    #     print("Inv  alid temperature. Please enter a numeric value.")
+    if temp:
+        if unit == "F":
+            conv_unit = convert_to_celsius(temp)
+            print(f"{temp}°F is {conv_unit}°C")
+        elif unit == "C":
+            conv_unit = convert_to_fahrenheit(temp)
+            print(f"{temp}°C is {conv_unit}°F")
+        else:
+            print("Run the program again and Choose a valid option(C/F)!")
+    else:
+        print("Invalid temperature. Please enter a numeric value.")
 
 if __name__ == "__main__":
     main()
